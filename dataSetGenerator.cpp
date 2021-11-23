@@ -23,10 +23,12 @@ int main(){
     for(int i=0; i<TEST_SIZE; i++){ 
         h_inVals[i] = (float)(rand()%10000 + 1)/(float)10000;
         h_outVals[i]=h_inVals[i]; 
-    } 
+    }
+
+    //SORT HERE THEN WRITE TO OUTPUT FILE
 
     char *input_file_name  = "input.raw";
-    char *output_file_name = "output.raw";
+    // char *output_file_name = "output.raw";
     write_data(input_file_name, h_inVals, TEST_SIZE);
-    write_data(output_file_name, h_outVals, TEST_SIZE);
+    // write_data(output_file_name, h_outVals, TEST_SIZE);
 }
