@@ -24,7 +24,6 @@ int main(){
         h_inVals[i] = (float)(rand()%10000 + 1)/(float)10000;
         h_outVals[i]=h_inVals[i]; 
     }
-
     //SORT HERE THEN WRITE TO OUTPUT FILE
 
     char *input_file_name  = "input.raw";
