@@ -6,9 +6,9 @@ import random
 # Algorithms
 from algorithms.mergeSort import merge_sort
 from algorithms.bitonicSort import bitonic_sort
+from algorithms.bubbleSort import bubble_sort
 
-algo_list = ['Merge Sort', 'Bitonic Sort', 'Radix Sort']
-speed_list = ['Fast', 'Medium', 'Slow']
+algo_list = ['Merge Sort', 'Bitonic Sort', 'Bubble Sort']
 canvasData = []
 algorithm_name = ""
 speed_name = ""
@@ -52,8 +52,13 @@ def drawData(data, colorArray):
 def sort():
     global canvasData
     timeTick = 0.1
-    # merge_sort(canvasData, 0, len(canvasData)-1, drawData, timeTick)
-    bitonic_sort(canvasData, 0, len(canvasData)-1, 1, drawData, timeTick)
+    if algo_menu.get() == "Bitonic Sort":
+        bitonic_sort(canvasData, 0, len(canvasData)-1, 1, drawData, timeTick)
+    elif algo_menu.get() == "Merge Sort":
+        merge_sort(canvasData, 0, len(canvasData)-1, drawData, timeTick)
+    elif algo_menu.get() == "Bubble Sort":
+        bubble_sort(canvasData, drawData, timeTick)
+
 
 ### User interface ###
 UI_frame = Frame(window, width= 900, height=300, bg=WHITE)
