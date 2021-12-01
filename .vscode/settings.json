@@ -4,5 +4,6 @@
         "algorithm": "cpp",
         "list": "cpp",
         "limits": "cpp"
-    }
+    },
+    "python.pythonPath": "c:\\users\\ajdelco\\appdata\\local\\programs\\python\\python39\\python.exe"
 }

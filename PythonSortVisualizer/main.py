@@ -5,6 +5,7 @@ import random
 
 # Algorithms
 from algorithms.mergeSort import merge_sort
+from algorithms.bitonicSort import bitonic_sort
 
 algo_list = ['Merge Sort', 'Bitonic Sort', 'Radix Sort']
 speed_list = ['Fast', 'Medium', 'Slow']
@@ -51,7 +52,8 @@ def drawData(data, colorArray):
 def sort():
     global canvasData
     timeTick = 0.1
-    merge_sort(canvasData, 0, len(canvasData)-1, drawData, timeTick)
+    # merge_sort(canvasData, 0, len(canvasData)-1, drawData, timeTick)
+    bitonic_sort(canvasData, 0, len(canvasData)-1, 1, drawData, timeTick)
 
 ### User interface ###
 UI_frame = Frame(window, width= 900, height=300, bg=WHITE)
